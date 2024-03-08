@@ -26,7 +26,7 @@ class UserUpdate(BaseModel):
     password: Optional[str] = None
 
 class UserInDB(Base):
-    __tablename__ = "users"
+    __tablename__ = "people"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     full_name = Column(String(50), index=True)

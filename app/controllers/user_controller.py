@@ -22,3 +22,4 @@ async def delete_user(user_id: int):
 @router.put("/{user_id}", response_model=UserOut)
 async def update_user(user_id: int, user_data: UserIn):
     return await user_service.update_user(user_id, user_data)
+
