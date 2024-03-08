@@ -14,8 +14,8 @@ metadata.reflect(bind=source_engine)
 metadata.reflect(bind=destination_engine)
 
 # Define the source and destination tables
-source_table = metadata.tables['users']
-destination_table = metadata.tables['users']
+source_table = metadata.tables['people']
+destination_table = metadata.tables['people']
 
 @app.get("/migrate")
 async def migrate_data():
