@@ -1,4 +1,3 @@
-# main.py
 from fastapi import FastAPI
 from app.controllers import user_controller
 from app.database import Base, engine  
