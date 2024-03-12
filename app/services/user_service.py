@@ -35,4 +35,4 @@ class UserService:
             setattr(user, var, value)
         self.db.commit()
         self.db.refresh(user)
-        return UserOut(**user.__dict__)v 
+        return UserOut(**user.__dict__)
