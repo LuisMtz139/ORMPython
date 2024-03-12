@@ -5,3 +5,5 @@
 
 ## Ejemplo migracion
 2.-  uvicorn migracion:app --reload
+
+3.- python -m uvicorn main:app --reload
