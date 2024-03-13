@@ -1,5 +1,5 @@
+from sqlalchemy import Column, BigInteger, String
 
-from sqlalchemy import Column, Integer, String
 from app.database import Base
 from pydantic import BaseModel
 
@@ -19,5 +19,5 @@ class Estatus_cardexOut(BaseModel):#obtener
 class Estatus_cardexInDB(Base):
     __tablename__ = "estatus_cardex"
 
-    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
     estatus = Column(String(50), index=True)

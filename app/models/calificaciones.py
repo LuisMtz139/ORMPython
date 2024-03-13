@@ -61,8 +61,9 @@ class CalificacionesInDB(Base):
     final = Column(Float)
     grupo_id = Column(BigInteger, ForeignKey("grupos.id"))
     estudiante_id = Column(BigInteger, ForeignKey("estudiantes.id"))
-    estatus_cardex_id = Column(BigInteger, ForeignKey('estatus_cardex.id'), nullable=True)
-    
+    estatus_cardex_id = Column(BigInteger, ForeignKey("estatus_cardex.id"), nullable=True)
+
+    # Relaciones
     grupo = relationship("GruposInDB", back_populates="calificaciones")
     estudiante = relationship("EstudiantesInDB", back_populates="calificaciones")
     estatus_cardex = relationship("EstatusCardexInDB", back_populates="calificaciones")
