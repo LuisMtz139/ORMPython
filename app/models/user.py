@@ -25,10 +25,11 @@ class UserUpdate(BaseModel):
     phone: Optional[str] = None
     password: Optional[str] = None
 
+
 class UserInDB(Base):
-    __tablename__ = "people"
+    __tablename__ = "user"
 
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     full_name = Column(String(50), index=True)
-    phone = Column(String(10),  index=True)  #unique=True
+    phone = Column(String(20),  index=True)  #unique=True
     password = Column(String(100))

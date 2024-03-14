@@ -35,5 +35,4 @@ class PersonasInDB(Base):
     nombre = Column(String(50), index=True) 
     apellido_paterno = Column(String(50), index=True)  
     telefono = Column(String(50), nullable=True)  
-    curp = Column(String(18), nullable=True)  
-    persona_id = Column(BigInteger, ForeignKey('personas.id'))  # Clave foránea
+    curp = Column(String(18), nullable=True)

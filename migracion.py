@@ -6,7 +6,7 @@ app = FastAPI()
 
 # SQLAlchemy 
 source_engine = create_engine('mysql://root:13960@localhost/primer')
-destination_engine = create_engine('mysql://root:13960@localhost/prueba')
+destination_engine = create_engine('mysql://root:Miller2001@localhost/prueba_uni')
 
 metadata = MetaData()
 
