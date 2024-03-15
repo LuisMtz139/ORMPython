@@ -35,13 +35,13 @@ class EstudiantesInDB(Base):
 
     id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
     matricula = Column(String(20), nullable=False, unique=True)
-    persona_id = Column(BigInteger, ForeignKey("personas.id"), nullable=False)
-    estatus_actual_id = Column(BigInteger, ForeignKey("estatus_estudiantes.id"), nullable=False)
-    periodo_id = Column(BigInteger, ForeignKey("periodos.id"), nullable=False)
-    tutor_id = Column(BigInteger, ForeignKey("docentes.id"), nullable=True)
+   # persona_id = Column(BigInteger, ForeignKey("personas.id"), nullable=False)
+   # estatus_actual_id = Column(BigInteger, ForeignKey("estatus_estudiantes.id"), nullable=False)
+   # periodo_id = Column(BigInteger, ForeignKey("periodos.id"), nullable=False)
+   # tutor_id = Column(BigInteger, ForeignKey("docentes.id"), nullable=True)
 
     # Relaciones
-    persona = relationship("PersonasInDB", back_populates="estudiantes")
-    estatus_actual = relationship("EstatusEstudiantesInDB", back_populates="estudiantes")
-    periodo = relationship("PeriodosInDB", back_populates="estudiantes")
-    tutor = relationship("DocentesInDB", back_populates="estudiantes")
+   # persona = relationship("PersonasInDB", back_populates="estudiantes")
+   # estatus_actual = relationship("EstatusEstudiantesInDB", back_populates="estudiantes")
+    #periodo = relationship("PeriodosInDB", back_populates="estudiantes")
+    #tutor = relationship("DocentesInDB", back_populates="estudiantes")

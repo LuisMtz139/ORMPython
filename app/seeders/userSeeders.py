@@ -17,5 +17,3 @@ def seed_people(num_people):
         session.commit()
     finally:
         session.close()
-
-  # Genera y guarda 100 personas en la base de datos

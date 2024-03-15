@@ -27,11 +27,11 @@ class GruposInDB(Base):
     __tablename__ = "grupos"
 
     id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
-    periodo_id = Column(BigInteger, ForeignKey("periodos.id"))
-    asignatura_id = Column(BigInteger, ForeignKey("asignaturas.id"))
-    docente_id = Column(BigInteger, ForeignKey("docentes.id"))
+   # periodo_id = Column(BigInteger, ForeignKey("periodos.id"))
+   # asignatura_id = Column(BigInteger, ForeignKey("asignaturas.id"))
+   # docente_id = Column(BigInteger, ForeignKey("docentes.id"))
 
     # Relaciones
-    periodo = relationship("PeriodosInDB", back_populates="grupos")
-    asignatura = relationship("AsignaturasInDB", back_populates="grupos")
-    docente = relationship("DocentesInDB", back_populates="grupos")
+   # periodo = relationship("PeriodosInDB", back_populates="grupos")
+   # asignatura = relationship("AsignaturasInDB", back_populates="grupos")
+   # docente = relationship("DocentesInDB", back_populates="grupos")

@@ -1,6 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from app.database import Base
 from pydantic import BaseModel
+from sqlalchemy.orm import relationship
 
 from typing import Optional
 
@@ -15,7 +16,6 @@ class UserOut(BaseModel):#obtener
     phone: str
     password: str
     
-
 class UserDelete(BaseModel):
     id: int
     
@@ -25,7 +25,6 @@ class UserUpdate(BaseModel):
     phone: Optional[str] = None
     password: Optional[str] = None
 
-
 class UserInDB(Base):
     __tablename__ = "user"
 
@@ -33,3 +32,4 @@ class UserInDB(Base):
     full_name = Column(String(50), index=True)
     phone = Column(String(20),  index=True)  #unique=True
     password = Column(String(100))
+    asignaturas = relationship("AsignaturasInDB", back_populates="user")  # Relación con la tabla de asignaturas

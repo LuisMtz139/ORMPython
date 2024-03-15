@@ -28,3 +28,5 @@ class PeriodosInDB(Base):
     id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
     anio = Column(Integer, nullable=False)
     cat_periodo_id = Column(Integer, ForeignKey('cat_periodos.id'))  # Clave foránea
+    
+    cat_periodos = relationship("Cat_periodosInDB", back_populates="periodos")  # Relación inversa con personas

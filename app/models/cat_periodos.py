@@ -1,6 +1,8 @@
 from sqlalchemy import Column, Integer, String
 from app.database import Base
 from pydantic import BaseModel
+from sqlalchemy.orm import relationship
+
 
 from typing import Optional
 
@@ -22,4 +24,5 @@ class Cat_periodosInDB(Base):
     periodo = Column(String(50), index=True)
     
     
-    
+    periodos = relationship("PeriodosInDB", back_populates="cat_periodos")  # Relación con direcciones
+

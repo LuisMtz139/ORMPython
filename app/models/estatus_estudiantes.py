@@ -22,9 +22,4 @@ class EstatusEstudiantesInDB(Base):
     id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
     estatus = Column(String(50), nullable=False, unique=True)
 
-    __table_args__ = (
-        CheckConstraint(
-            'estatus IN ("INSCRITO", "BAJA_DEFINITIVA", "BAJA_ACADEMICA", "TITULADO")',
-            name='estatus_check'
-        ),
-    )
+

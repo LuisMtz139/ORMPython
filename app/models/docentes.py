@@ -1,6 +1,8 @@
-from sqlalchemy import Column, BigInteger, String, ForeignKey
+from sqlalchemy import Column, BigInteger, Integer, ForeignKey
 from app.database import Base
 from pydantic import BaseModel
+from sqlalchemy.orm import relationship
+
 
 from typing import Optional
 
@@ -17,4 +19,7 @@ class DocentesInDB(Base):
     __tablename__ = "docentes"
 
     id = Column(BigInteger, primary_key=True, index=True, autoincrement=True)
-    persona_id = Column(BigInteger, ForeignKey('personas.id'))  # Clave foránea
+    
+    
+    persona_id = Column(Integer, ForeignKey('personas.id'))
+    persona = relationship("PersonasInDB", back_populates="docentes")
